@@ -27,6 +27,7 @@ class CodeRule extends AdminBase
             ['door_type' => 'M6', 'name' => '装甲门'],
             ['door_type' => 'W9', 'name' => '套装门'],
             ['door_type' => 'M4', 'name' => '耐火窗'],
+            ['door_type' => 'M8_1', 'name' => '室内防火门'],
         ];
         return retmsg(0, $data);
     }
@@ -449,6 +450,10 @@ t.rule_name ='$ruleName' and t.code_sort='$codeSort' and t.door_type='$doorType'
             if ($key >= 13) {
                 $charStart = 'A' . chr(ord($startChar) + 2 * ($key - 13));
                 $charEnd = 'A' . chr(ord($startChar) + 2 * ($key - 13) + 1);
+            }
+            if ($key >= 26) {
+                $charStart = 'B' . chr(ord($startChar) + 2 * ($key - 26));
+                $charEnd = 'B' . chr(ord($startChar) + 2 * ($key - 26) + 1);
             }
             //设置标题栏值并将相邻单元格合并
             $sheet->setCellValue($charStart . "2", $codeSort);

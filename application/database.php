@@ -12,7 +12,7 @@
 return [
     // 数据库类型
     'type'            => '\think\oracle\Connection',
-//    // 服务器地址
+    // 服务器地址
 //    'hostname'        => '192.111.111.221',
 //    // 数据库名
 //    'database'        => 'orcl',
