@@ -509,7 +509,7 @@ function codeRule($ruleName = '成品', $doorType = 'M9')
     }
 
     if ($ruleName == '单框') {
-        if($doorType == 'M8_1'){
+        if ($doorType == 'M8_1') {
             $arr = array(
                 "3" => array("order_column_name" => 'BANCP', "code_name" => '半成品'),
                 "4" => array("order_column_name" => 'DKTYPE', "code_name" => '单框类型'),
@@ -522,7 +522,7 @@ function codeRule($ruleName = '成品', $doorType = 'M9')
                 "15" => array("order_column_name" => 'MKHOUDU', "code_name" => '框厚'),
                 "19" => array("order_column_name" => 'BEIYONG', "code_name" => '备用'),
             );
-        }else {
+        } else {
             $arr = array("3" => array("order_column_name" => 'BANCP', "code_name" => '半成品'),
                 "4" => array("order_column_name" => 'DKTYPE', "code_name" => '单框类型'),
                 "5" => array("order_column_name" => 'MENKUANG', "code_name" => '门框型号'),
@@ -549,12 +549,22 @@ function codeRule($ruleName = '成品', $doorType = 'M9')
     }
 
     if ($ruleName == '窗花') {
-        $arr = array("6" => array("order_column_name" => 'CHUANGHUA', "code_name" => '半成品状态'),
-            "7" => array("order_column_name" => 'DKCAILIAO', "code_name" => '窗花材质'),
-            "8" => array("order_column_name" => 'CHUANGHUA', "code_name" => '成品外形'),
-            "10" => array("order_column_name" => 'HEIGHT', "code_name" => '高度'),
-            "13" => array("order_column_name" => 'WIDTH', "code_name" => '宽度')
-        );
+        if ($doorType == 'M8_1') {
+            $arr = array(
+                "6" => array("order_column_name" => 'CHUANGHUA', "code_name" => '半成品状态'),
+                "7" => array("order_column_name" => 'DKCAILIAO', "code_name" => '窗花材质'),
+                "8" => array("order_column_name" => 'CHUANGHUA', "code_name" => '成品外形'),
+                "10" => array("order_column_name" => 'HEIGHT', "code_name" => '高度'),
+                "13" => array("order_column_name" => 'WIDTH', "code_name" => '宽度')
+            );
+        } else {
+            $arr = array("6" => array("order_column_name" => 'CHUANGHUA', "code_name" => '半成品状态'),
+                "7" => array("order_column_name" => 'DKCAILIAO', "code_name" => '窗花材质'),
+                "8" => array("order_column_name" => 'CHUANGHUA', "code_name" => '成品外形'),
+                "10" => array("order_column_name" => 'HEIGHT', "code_name" => '高度'),
+                "13" => array("order_column_name" => 'WIDTH', "code_name" => '宽度')
+            );
+        }
     }
 
     if ($ruleName == '别墅门') {
@@ -585,7 +595,7 @@ function codeRule($ruleName = '成品', $doorType = 'M9')
         );
     }
     if ($ruleName == '门套') {
-        if($doorType == 'M8_1'){
+        if ($doorType == 'M8_1') {
             $arr = array(
                 "3" => array("order_column_name" => 'FHJIBIE', "code_name" => '防火级别'),
                 "4" => array("order_column_name" => 'MENKUANG,MENKUANGYQ', "code_name" => '门框+门框要求'),
@@ -605,7 +615,7 @@ function codeRule($ruleName = '成品', $doorType = 'M9')
                 "24" => array("order_column_name" => 'BAOZHPACK,BAOZHUANGFS', "code_name" => '包装品牌&方式'),
                 "25" => array("order_column_name" => 'BEIYONG', "code_name" => '备用'),
             );
-        }else {
+        } else {
             $arr = array("3" => array("order_column_name" => 'DANG_CI', "code_name" => '档次'),
                 "4" => array("order_column_name" => 'DOOR_STYLE', "code_name" => '产品种类'),
                 "5" => array("order_column_name" => 'MENSHAN', "code_name" => '门扇类型'),
@@ -644,7 +654,7 @@ function codeRule($ruleName = '成品', $doorType = 'M9')
     }
 
     if ($ruleName == '单套板') {
-        if($doorType == 'M8_1'){
+        if ($doorType == 'M8_1') {
             $arr = array(
                 "3" => array("order_column_name" => 'MENKUANG,MENKUANGYQ', "code_name" => '门框+门框要求'),
                 "4" => array("order_column_name" => 'DANBAN_TYPE', "code_name" => '单板类型'),
@@ -658,7 +668,7 @@ function codeRule($ruleName = '成品', $doorType = 'M9')
                 "18" => array("order_column_name" => 'MENKUANG', "code_name" => '门套样式'),
                 "19" => array("order_column_name" => 'BEIYONG', "code_name" => '备用'),
             );
-        }else {
+        } else {
             $arr = array("3" => array("order_column_name" => 'DOOR_STYLE', "code_name" => '产品种类'),
                 "4" => array("order_column_name" => 'DANBAN_TYPE', "code_name" => '单板类型'),
                 "5" => array("order_column_name" => 'MENKUANGCZ', "code_name" => '门类结构'),
@@ -695,7 +705,7 @@ function codeRule($ruleName = '成品', $doorType = 'M9')
     }
 
     if ($ruleName == '线条') {
-        if($doorType == 'M8_1'){
+        if ($doorType == 'M8_1') {
             $arr = array(
                 "3" => array("order_column_name" => 'MENKUANG,MENKUANGYQ', "code_name" => '门框+门框要求'),
                 "4" => array("order_column_name" => 'DOOR_STYLE', "code_name" => '线条类型'),
@@ -708,7 +718,7 @@ function codeRule($ruleName = '成品', $doorType = 'M9')
                 "16" => array("order_column_name" => 'MENKUANGCZ', "code_name" => '门类结构'),
                 "17" => array("order_column_name" => 'BEIYONG', "code_name" => '备用'),
             );
-        }else {
+        } else {
             $arr = array(
                 "3" => array("order_column_name" => 'DOOR_STYLE', "code_name" => '产品种类'),
                 "4" => array("order_column_name" => 'DOOR_STYLE', "code_name" => '线条类型'),
